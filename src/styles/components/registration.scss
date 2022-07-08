@@ -1,0 +1,176 @@
+.registration.block {
+  padding-top: 15px;
+
+  @include rm(480){
+    padding-top: 30px;
+  }
+  @include rm(768){
+    padding-top: 40px;
+  }
+  @include rm(1024){
+    padding-top: 50px;
+  }
+  @include rm(1220){
+    padding-top: 60px;
+  }
+}
+
+.registration__success {
+  display: none;
+  padding: 20px;
+  text-align: center;
+  background: white;
+  margin: 0 auto;
+  max-width: 290px;
+  width: 100%;
+
+
+  padding-bottom: 30px;
+  border: solid 2px #000;
+
+  @include rm(480){
+    max-width: 350px;
+    padding: 30px 30px 30px;
+  }
+
+  @include rm(640) {
+    padding: 35px 45px 35px;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @include rm(1024) {
+    padding: 45px 60px 45px;
+    max-width: 700px;
+
+  }
+  @include rm(1220) {
+    padding: 65px 100px 70px;
+    max-width: 790px;
+  }
+
+}
+
+.check-in__subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+
+.registration__title {
+  font-size: 36px;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  //color: white;
+  font-weight: bold;
+
+
+  @include rm(480) {
+    font-size: 40px;
+  }
+
+
+  @include rm(640) {
+    font-size: 50px;
+  }
+
+  @include rm(768) {
+    font-size: 60px;
+  }
+
+  @include rm(1024) {
+    font-size: 70px;
+  }
+
+  @include rm(1220) {
+    font-size: 85px;
+  }
+}
+
+.registration__wrapper {
+  position: relative;
+  max-width: 290px;
+  margin: 0 auto;
+  width: 100%;
+
+  &:before {
+    position: absolute;
+    content: "";
+    bottom: -116px;
+    right: -117px;
+    width: 384px;
+    height: 384px;
+    background-image: url("../img/form-square.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
+  }
+
+
+
+  @include rm(480){
+    max-width: 350px;
+  }
+
+  @include rm(640) {
+    max-width: 450px;
+    &:before {
+      bottom: -127px;
+      right: -136px;
+    }
+  }
+  @include rm(768) {
+    &:before {
+      background-size: 70%;
+      bottom: -102px;
+      right: -114px;
+    }
+  }
+  @include rm(1024) {
+    max-width: 700px;
+    &:before {
+      background-size: 80%;
+      bottom: -112px;
+      right: -114px;
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      top: -90px;
+      left: -324px;
+      width: 927px;
+      height: 721px;
+      background-image: url("../img/form-elipce.png");
+      background-size: 80%;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 0;
+    }
+  }
+  @include rm(1220) {
+    max-width: 790px;
+    &:before {
+      background-size: 100%;
+      bottom: -90px;
+      right: -108px;
+    }
+  }
+}
+
+.registration .form {
+  position: relative;
+  z-index: 2;
+}
+
+.registration .btn {
+  @include rm(640) {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+

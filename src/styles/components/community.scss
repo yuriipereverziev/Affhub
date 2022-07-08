@@ -1,0 +1,193 @@
+.community-wrap {
+  position: relative;
+  max-width: 995px;
+  width: 100%;
+  margin: 0 auto;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: -170px;
+    left: -105px;
+    width: 367px;
+    height: 365px;
+    background-image: url("../img/star-rose.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    bottom: -70px;
+    right: -164px;
+    width: 395px;
+    height: 129px;
+    background-image: url("../img/lines-rose.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include rm(768){
+    &:before {
+      background-size: 60%;
+      top: -161px;
+      left: -160px;
+    }
+    &:after {
+      background-size: 60%;
+    }
+  }
+
+  @include rm(1024){
+
+    &:before {
+      top: -147px;
+      left: -160px;
+      background-size: 70%;
+    }
+  }
+
+  @include rm(1220){
+    &:before {
+      top: -129px;
+      left: -134px;
+      background-size: 100%;
+    }
+
+    &:after {
+      bottom: 68px;
+      right: -127px;
+      background-size: 100%;
+    }
+  }
+}
+
+.community-block {
+  position: relative;
+  z-index: 2;
+  border: solid 2px #000;
+  background-color: #fbfbfb;
+  padding: 10px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @include rm(640){
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  @include rm(1024){
+    padding-left: 60px;
+    padding-right: 60px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include rm(1220){
+    padding-left: 95px;
+    padding-bottom: 33px;
+    padding-top: 38px;
+    padding-right: 100px;
+  }
+}
+
+.community__text {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+
+
+  @include rm(640){
+    font-size: 30px;
+
+    &:before {
+      left: auto;
+      bottom: 0;
+      right: -215px;
+      transform: none;
+    }
+  }
+
+  @include rm(768){
+    font-size: 34px;
+  }
+  @include rm(1024){
+    font-size: 40px;
+    text-align: left;
+  }
+
+  @include rm(1220){
+    font-size: 48px;
+
+  }
+}
+
+.community-btn__wrapper {
+  width: 100%;
+  max-width: 280px;
+  position: relative;
+  padding-top: 75px;
+  margin: 0 auto;
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 36px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("../img/tg_fly-mob.png") no-repeat center;
+  }
+
+  @include rm(640) {
+
+    padding-top: 0;
+    padding-bottom: 60px;
+    margin: 0;
+
+    &:before {
+      bottom: 0;
+      top: auto;
+    }
+  }
+
+  @include rm(1024) {
+    padding-bottom: 0;
+
+    &:before {
+      width: 200px;
+      height: 72px;
+      bottom: 10px;
+      left: -270px;
+      transform: none;
+      transform: scale(1,-1) rotate(12deg);
+      background: url("../img/tg_fly.png") no-repeat center;
+    }
+  }
+
+  @include rm(1220){
+
+    &:before {
+      transform: none;
+      bottom: -44px;
+      left: -222px;
+    }
+
+  }
+}
+
+.community__btn {
+  display: block;
+}
+
+
+.nobr {
+  @include rm(1220){
+    display: none;
+  }
+}

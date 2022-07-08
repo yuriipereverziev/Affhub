@@ -1,0 +1,143 @@
+.form {
+  max-width: 290px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  padding: 20px;
+  padding-bottom: 30px;
+  border: solid 2px #000;
+
+  @include rm(480){
+    max-width: 350px;
+    padding: 30px 30px 30px;
+  }
+
+  @include rm(640) {
+    padding: 35px 45px 35px;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @include rm(1024) {
+    padding: 45px 60px 45px;
+    max-width: 700px;
+
+  }
+  @include rm(1220) {
+    padding: 65px 100px 70px;
+    max-width: 790px;
+  }
+
+}
+
+.form__input {
+  padding: 12px 10px 12px 10px;
+  width: 100%;
+  transition: .3s;
+  color: #444;
+  font-size: 16px;
+  border: none;
+  background-color: #fff;
+
+  @include rm(1220){
+    padding: 16px 10px;
+    padding-left: 25px;
+    font-size: 24px;
+  }
+}
+
+.form__input--wrap {
+  border: solid 1px #10e6d9;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  display: block;
+
+  @include rm(1220){
+    margin-bottom: 43px;
+  }
+}
+
+
+.text__error {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-size: 10px;
+  font-style: italic;
+  display: none;
+  color: red;
+
+  @include rm(640){
+    font-size: 13px;
+  }
+}
+
+.error {
+  display: block;
+}
+
+.success {
+  position: relative;
+  border: 1px solid #10e6d9;
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/check-ok.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #10e6d9;
+  }
+}
+
+.error-border {
+  position: relative;
+  border: 1px solid red;
+
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/check-error.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: red;
+  }
+}
+
+.form__input--pos {
+  @include rm(1024){
+    margin-bottom: 40px;
+  }
+  @include rm(1220){
+    margin-bottom: 80px;
+  }
+}
+
+.loader-wrapper {
+  display: none;
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../img/spinner.svg") no-repeat center;
+  background-color: rgba(34, 60, 80, 0.15);
+  z-index: 99;
+}
+

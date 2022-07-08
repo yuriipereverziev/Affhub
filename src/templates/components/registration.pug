@@ -1,0 +1,62 @@
+.registration.block#registration
+  .container
+
+    h2.registration__title Реєстрація
+
+    .registration__success
+      h2.check-in__subtitle
+        | Заявку на реєстрацію прийнято.
+        br
+        | Очікуйте, ми з вами зв'яжемося!
+
+    .registration-block
+
+      .registration__wrapper
+        .loader-wrapper
+          .loader
+        form#form.form.form-js(action='/' method='post')
+          label(for="name1") Ім’я:
+          .form__input--wrap
+            input.form__input.form__input--name.name-js(id="name1" placeholder="Ваше ім'я" type='text' name='name')
+            span.text__error Заповніть поле
+
+          label(for="telegram1") Telegram:
+          .form__input--wrap
+            input.form__input.form__input--telegram.telegram-js(id="telegram1" placeholder='Нікнейм через @' type='text' name='telegram')
+            span.text__error Заповніть поле
+
+          label(for="email1") Email:
+          .form__input--wrap
+            input.form__input.form__input--email.email-js(id="email1" placeholder='Ваша електронна пошта' type='email' name='email')
+            span.text__error Некоректна адреса, обов'язковий елемент @
+
+          p Позицiя:
+          .select.form__input--wrap.select-js(data-state='')
+
+            .select__title.form__input.select__title-js(data-default='owner / ceo') owner / ceo
+
+            .select__content
+              input#singleSelect0.select__input(type='radio' name='position' checked='' value="owner / ceo")
+              label.select__label.select__label-js(for='singleSelect0') owner / ceo
+
+              input#singleSelect1.select__input(type='radio' name='position' value="webmaster / mediabayer")
+              label.select__label.select__label-js(for='singleSelect1') webmaster / mediabayer
+
+              input#singleSelect2.select__input(type='radio' name='position' value="team lead")
+              label.select__label.select__label-js(for='singleSelect2') team lead
+
+              input#singleSelect3.select__input(type='radio' name='position' value="affiliate manager")
+              label.select__label.select__label-js(for='singleSelect3') affiliate manager
+
+              input#singleSelect4.select__input(type='radio' name='position')
+              label.select__label.select__label-js(for='singleSelect4') інше: вказати
+
+          .form__input-inner.form__input--wrap.hidden
+            input.form__input.form__input--email.position-js(id="test" placeholder='Вкажiть вашу позицiю' type='text' name="test")
+            span.text__error Заповніть поле
+
+          input.js-input-date(type='hidden' name='time')
+
+          button.btn.form__btn Надiслати
+
+

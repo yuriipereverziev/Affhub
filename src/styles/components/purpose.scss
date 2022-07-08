@@ -1,0 +1,116 @@
+.purpose .container {
+  @include rm(1024){
+    display: flex;
+  }
+}
+
+.purpose__left {
+  @include rm(1024){
+    width: 100%;
+    max-width: 480px;
+    margin-right: 30px;
+  }
+
+  @include rm(1220){
+    max-width: 600px;
+    margin-right: 10px;
+  }
+}
+
+.purpose__code {
+  @include rm(1024){
+  position: relative;
+    z-index: 2;
+  }
+}
+
+.purpose__btn {
+  display: block;
+  margin-bottom: 25px;
+
+  @include rm(1024){
+    max-width: 380px;
+    margin-right: 20px;
+  }
+  @include rm(1220){
+    margin-right: 30px;
+  }
+}
+
+.purpose__img {
+  display: none;
+  @include rm(1024){
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+    padding-right: 200px;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      content: "";
+      width: 390px;
+      height: 94px;
+      background: url("../img/line-decor.png") right;
+      background-size: 70%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @include rm(1220){
+    padding-right: 290px;
+    &:before {
+      background-size: 100%;
+      top: 47%;
+      right: -10px;
+    }
+  }
+}
+
+.purpose__rigth {
+  @include rm(1024){
+    width: 100%;
+  }
+
+  @include rm(1220){
+    width: auto;
+  }
+}
+
+
+.purpose__text {
+  margin-bottom: 20px;
+
+  @include rm(1024){
+    margin-bottom: 0;
+  }
+
+  @include rm(1220){
+    line-height: 1.6; //desk
+    max-width: 490px;
+    width: 100%;
+  }
+}
+
+.purpose__accent {
+  display: inline;
+}
+
+
+.purpose-btn__wrapper {
+  @include rm(640){
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+.purpose__title {
+  @include rm(1220){
+    margin-bottom: 40px;//desk
+  }
+}

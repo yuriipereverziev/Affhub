@@ -1,0 +1,297 @@
+body {
+  position: relative;
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 1.3;
+  overflow-x: hidden;
+
+  @include rm(1024){
+    font-size: 18px;
+  }
+}
+
+html {
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  overflow: hidden;
+}
+
+button {
+  display: block;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @include rm(480) {
+    width: 480px;
+  }
+
+  @include rm(640) {
+    width: 640px;
+  }
+
+  @include rm(768) {
+    width: 768px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @include rm(1024) {
+    width: 1024px;
+  }
+
+  @include rm(1220) {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 1220px;
+  }
+}
+
+.title {
+  font-family: "Acworth", sans-serif;
+  font-size: 25px;
+  color: rgb(32, 32, 32);
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 25px;
+
+  @include rm(480) {
+    font-size: 30px;
+  }
+
+  @include rm(640) {
+    font-size: 34px;
+  }
+
+  @include rm(768) {
+    font-size: 38px;
+  }
+
+  @include rm(1024) {
+    font-size: 40px;
+  }
+
+  @include rm(1220) {
+    font-size: 48px;
+    line-height: 1.3;
+  }
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-black {
+  font-weight: 900;
+}
+.text-italic {
+  font-style: italic;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+
+br {
+  line-height: 1;
+  font-size: 0;
+}
+
+.text-bg__white {
+  padding: 5px;
+  background: white;
+}
+
+.accent-rose {
+  display: block;
+  color: $rose;
+}
+
+.bg-yellow {
+  background-color: rgba(255, 176, 0, 0.24);
+}
+
+.bg-rose {
+  background-color: rgba(255, 87, 198, 0.24);
+}
+
+.bg-green {
+  background-color: rgba(16, 230, 217, 0.24);
+}
+
+.bg-purple {
+  background-color: rgba(159, 114, 255, 0.24);
+}
+
+.bg-blue {
+  background-color: rgba(64, 151, 211, 0.24);
+}
+
+.bg-orange {
+  background-color: rgba(255, 89, 89, 0.24);
+}
+
+.accent-shadow-yellow {
+  box-shadow: 8px 8px 0px 0px rgba(255, 176, 0, 0.24);
+}
+
+.accent-shadow-rose {
+  box-shadow: 8px 8px 0px 0px rgba(255, 87, 198, 0.24);
+}
+
+.accent-shadow-green {
+  box-shadow: 8px 8px 0px 0px rgba(16, 230, 217, 0.24);
+}
+
+.accent-shadow-purple {
+  box-shadow: 8px 8px 0px 0px rgba(159, 114, 255, 0.24);
+}
+
+.accent-shadow-blue {
+  box-shadow: 8px 8px 0px 0px rgba(64, 151, 211, 0.24);
+}
+
+.accent-shadow-orange {
+  box-shadow: 8px 8px 0px 0px rgba(255, 89, 89, 0.24);
+}
+
+.accent-shadow-black {
+  box-shadow: 8px 8px 0px 0px #D7D7D7;
+
+}
+
+.btn {
+  position: relative;
+  max-width: 280px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  background: $purple;
+  color: white;
+  cursor: pointer;
+  text-align: left;
+  padding: 15px 60px 15px 10px;
+  border: 2px solid black;
+  box-shadow: 0 8px 0 0 rgba(233, 223, 255, 1);
+  margin: 0 auto;
+
+  &::before {
+    position: absolute;
+    content: "";
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 11px;
+    background: url("../img/arrow-white.svg");
+    background-size: 100%;
+  }
+
+  &:active {
+    color: black;
+    box-shadow: none;
+    background-color: $yellow;
+
+    &::before {
+      background: url("../img/arrow-black.svg");
+      background-size: 100%;
+    }
+  }
+
+  @include rm(640) {
+    margin: 0;
+  }
+
+  @include rm(1024) {
+    &:hover {
+      background-color: $yellow;
+      box-shadow: none;
+    }
+  }
+
+  @include rm(1220){
+    font-size: 24px; //desk
+  }
+}
+
+.main-bg {
+  //position: relative;
+
+  background-color: #FBFBFB;
+
+
+  @include rm(480){
+    background-image: url("../img/main-bg.png");
+    background-repeat: no-repeat;
+    background-position: top 75px center;
+    background-size: cover;
+  }
+
+  //@include rm(1220){
+  //  background-image: url("../img/main-bg.svg");
+  //
+  //}
+  //z-index: -2;
+}
+
+.mark-yellow {
+  display: inline-block;
+  //font-family: "Montserrat", Helvetica, sans-serif;
+  background-color: rgba(255, 176, 0, 0.24);
+}
+
+.mark-green {
+  display: inline-block;
+  //font-family: "Montserrat", Helvetica, sans-serif;
+  background-color: rgba(16, 230, 217, 0.24);
+}
+
+.mark-purple {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-style: italic;
+  display: inline-block;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  background-color:  #decffe;
+}
+
+.mark-rose {
+  padding-left: 5px;
+  padding-right: 10px;
+  font-weight: bold;
+  line-height: 1;
+  font-style: italic;
+  display: inline-block;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  background-color: rgba(255, 87, 198, 0.24);
+}
+
+
+.circle-shadow-yellow {
+  box-shadow: 8px -8px 0 0 #ffecc2;
+}
+
+.circle-shadow-rose {
+box-shadow: 8px -8px 0 0 #ffddf4}
+
+.circle-shadow-green {
+  box-shadow: 8px -8px 0 0 #c6f9f6;
+}
+
+.circle-shadow-purple {
+  box-shadow: 8px -8px 0 0 #decffe;
+}

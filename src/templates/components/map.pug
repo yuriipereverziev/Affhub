@@ -1,0 +1,14 @@
+.map.block
+  .container
+    .map__title.title Як&nbsp;
+      span.mark-rose  дістатись
+      | &nbsp;
+      span.map__subtitle  до локації?
+
+
+    .map__wrapper.accent-shadow-rose
+      a(href="https://goo.gl/maps/B7dQA9Q1xbukH4ua8" target="_blank").map__link
+        picture
+          source(media='(max-width: 639px)' srcset='img/map-img-mob.png')
+          //source(type='image/webp' srcset='img/image.webp')
+          img.map__img(src="img/map-img.png" alt="image" loading="lazy" width="1200" height="413")

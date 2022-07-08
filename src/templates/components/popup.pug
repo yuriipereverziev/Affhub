@@ -1,0 +1,65 @@
+.popup
+  .popup-wrapper.accent-shadow-black
+    button.close
+    .popup__form
+      .popup-registration-block
+        .popup-registration__success
+          h2.check-in__subtitle
+            | Заявку на реєстрацію прийнято.
+            br
+            | Очікуйте, ми з вами зв'яжемося!
+
+        .popup-registration__wrapper
+          .popup-loader-wrapper
+            .popup-loader
+
+        form.form.popup-form(action='/' method='post')
+          label(for="name") Ім’я:
+          .form__input--wrap
+            input.form__input.form__input--name.popup-name(id="name" placeholder="Ваше ім'я" type='text' name='name')
+            span.text__error заповніть поле
+
+          label(for="telegram") Telegram:
+          .form__input--wrap
+            input.form__input.form__input--telegram.popup-telegram(id="telegram" placeholder='Нікнейм через @' type='text' name='telegram')
+            span.text__error заповніть поле
+
+          label(for="email") Email:
+          .form__input--wrap
+            input.form__input.form__input--email.popup-email(id="email" placeholder='Ваша електронна пошта' type='email' name='email')
+            span.text__error заповніть поле
+
+          p Позицiя:
+          .select.form__input--wrap.popup-select(data-state='')
+
+            .select__title.form__input.popup-select__title(data-default='owner / ceo') owner / ceo
+
+            .select__content
+              input#singleSelect5.select__input(type='radio' name='position' checked='' value="owner / ceo")
+              label.select__label.popup-select__label(for='singleSelect5') owner / ceo
+
+              input#singleSelect6.select__input(type='radio' name='position' value="webmaster / mediabayer")
+              label.select__label.popup-select__label(for='singleSelect6') webmaster / mediabayer
+
+              input#singleSelect7.select__input(type='radio' name='position' value="team lead")
+              label.select__label.popup-select__label(for='singleSelect7') team lead
+
+              input#singleSelect8.select__input(type='radio' name='position' value="affiliate manager")
+              label.select__label.popup-select__label(for='singleSelect8') affiliate manager
+
+              input#singleSelect9.select__input.inner-test(type='radio' value="інше: вказати")
+              label.select__label.popup-select__label(for='singleSelect9') інше: вказати
+
+
+          .popup__input-inner.form__input--wrap.hidden
+            input.form__input.form__input--email.popup-position-js(placeholder='Вкажiть вашу позицiю' type='text')
+            span.text__error Заповніть поле
+
+          input.js-input-date-popup(type='hidden' name='time')
+
+
+          button.btn.form__btn Надiслати
+  .overlay
+
+
+

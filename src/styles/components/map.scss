@@ -1,0 +1,64 @@
+.map__title {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: -144px;
+    width: 290px;
+    height: 32px;
+    background-image: url("../img/wave-green.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include rm(480){
+    padding-right: 60px;
+
+    &:before {
+      top: 3px;
+      left: auto;
+      right: -155px;
+    }
+  }
+
+  @include rm(640){
+    padding-right: 60px;
+
+    &:before {
+      right: -60px;
+    }
+  }
+
+  @include rm(1024){
+    &:before {
+      background-size: 60%;
+    }
+  }
+
+  @include rm(1220){
+    margin-bottom: 40px;
+
+    &:before {
+      top: 15px;
+      right: 0px;
+      background-size: 100%;
+    }
+  }
+}
+
+.map__subtitle {
+  display: block;
+  padding-left: 100px;
+
+  @include rm(480){
+    padding-left: 0;
+    display: inline-block;
+  }
+}
+
+.map__wrapper {
+  border: 2px solid black;
+}

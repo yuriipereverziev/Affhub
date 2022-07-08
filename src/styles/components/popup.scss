@@ -1,0 +1,215 @@
+.popup-registration-block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 280px;
+  width: 100%;
+  padding: 12px;
+  border: 2px solid black;
+  min-height: 405px;
+
+  @include rm(640) {
+    padding: 20px;
+    max-width: 100%;
+    min-height: 492px;
+  }
+}
+
+.popup__form .select__label {
+  font-size: 14px;
+
+  @include rm(480){
+    font-size: 16px;
+  }
+}
+
+.popup__form .select[data-state=active] .select__label+.select__input+.select__label {
+  max-height: 35px;
+
+  @include rm(1220){
+    max-height: 45px;
+  }
+}
+
+.popup__form .select__content {
+  position: absolute;
+  top: 39px;
+
+  @include rm(480) {
+    top: 46px;
+  }
+}
+
+.popup__form .form {
+  padding: 0px;
+  border: none;
+}
+
+.popup-wrapper {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 280px;
+  height: auto;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  z-index: 21;
+  text-align: left;
+  display: none;
+
+  @include rm(1024) {
+    width: 500px;
+  }
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+  display: none;
+}
+
+/*Close Button */
+.close {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: -35px;
+  right: 0px;
+  width: 30px;
+  height: 30px;
+  opacity: 0.8;
+
+  @include rm(640) {
+    top: -50px;
+    right: -50px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.close:before, .close:after {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 30px;
+  content: '';
+  background-color: #fff;
+  z-index: 10;
+
+  @include rm(640) {
+    height: 40px;
+  }
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.popup__form .form__input--wrap {
+  margin-top: 5px;
+  margin-bottom: 20px;
+
+  @include rm(480) {
+    margin-bottom: 25px;
+  }
+
+  @include rm(640) {
+
+    margin-top: 10px;
+  }
+}
+
+.popup__form .text__error {
+  bottom: -15px;
+  @include rm(480) {
+    bottom: -20px;
+  }
+}
+
+.popup__form .form__input {
+
+
+  font-size: 14px;
+
+  padding: 10px;
+
+  @include rm(480) {
+    font-size: 16px;
+  }
+
+  @include rm(640) {
+    padding: 12px 10px;
+  }
+
+  @include rm(1220) {
+    padding: 12px 10px;
+  }
+}
+
+
+.popup__form .form__input--wrap {
+  @include rm(1220) {
+    border: solid 1px #10e6d9;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+}
+
+
+.popup__form .form__input--pos {
+  @include rm(1220) {
+    margin-bottom: 30px;
+  }
+}
+
+
+.popup__form .btn {
+  font-size: 16px;
+  max-width: 100%;
+  @include rm(640){
+    font-size: 18px;
+  }
+}
+
+.popup-loader-wrapper {
+  display: none;
+}
+
+.popup-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/spinner.svg") no-repeat center;
+  background-color: rgba(34, 60, 80, 0.15);
+  z-index: 99;
+}
+
+.popup-registration__success {
+  display: none;
+  text-align: center;
+}
+
+
