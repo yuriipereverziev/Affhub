@@ -67,10 +67,12 @@
     margin-left: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
     max-width: 100%;
   }
 
   @include rm(1220) {
+    justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: 95px;
   }
@@ -91,7 +93,7 @@
       content: "";
       position: absolute;
       top: -160px;
-      right: -266px;
+      right: -207px;
       width: 624px;
       height: 486px;
       background-repeat: no-repeat;
@@ -107,6 +109,7 @@
     margin-top: 20px;
 
     &:before {
+      right: -266px;
       top: -123px;
       background-size: 100%;
       z-index: 0;
@@ -185,6 +188,8 @@
   margin-left: 10px;
   background: white;
 
+  border: 1px solid white;
+
   @include rm(1220){
     padding-left: 15px;
     padding-bottom: 5px;
@@ -238,6 +243,7 @@
   @include rm(1220) {
     max-width: 265px;
     margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -245,6 +251,15 @@
   @include rm(640) {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  @include rm(1024){
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  @include rm(1220){
+    max-width: 100%;
+    justify-content: space-around;
   }
 }
 
@@ -269,20 +284,23 @@
 
 .speaker__num--green {
   background: #c6f9f6;
+  border: 1px solid #c6f9f6;
 }
 
 .speaker__num--yellow {
   background: #ffecc2;
+  border: 1px solid #ffecc2;
 }
 
 .speaker__num--rose {
   background: #ffddf4;
+  border: 1px solid #ffddf4;
 }
 
 .speaker__num--purple {
   background: #decffe;
+  border: 1px solid #decffe;
 }
-
 
 .speaker__position--green {
   color: #10e6d9;
