@@ -20,7 +20,7 @@ export default function () {
 
   function setName(field) {
     function isName(name) {
-      var re = /^[a-zA-Zа-яёА-ЯЁ\s\-]+$/;
+      var re = /^[a-zA-Zа-яёЇїІіЄєҐґА-ЯЁ\s\-]+$/;
       return re.test(String(name).toLowerCase());
     }
 
