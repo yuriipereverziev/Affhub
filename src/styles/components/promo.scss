@@ -1,40 +1,44 @@
-.promo {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
+.promo .container {
+  display: flex;
+  flex-direction: column;
 
-.promo__logo {
-  width: 100%;
-  max-width: 135px;
-  margin-bottom: 40px;
+  padding-top: 160px;
+  background: url("../img/promo-bg-mob.png") top right;
+  background-repeat: no-repeat;
+  background-size: 100%;
 
-  @include rm(640) {
-    max-width: 150px;
-  }
-
-  @include rm(768) {
-    max-width: 190px;
+  @include rm(480) {
+    background: url("../img/promo-flag.png") top right -35px;
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
 
   @include rm(1024) {
-    max-width: 220px;
-    margin-bottom: 0;
+    padding-top: 30px;
+    background: url("../img/promo-flag.png") top right -35px;
+    background-size: 65%;
+    background-repeat: no-repeat;
+  }
+  @include rm(1220) {
+    padding-top: 38px;
+    background: url("../img/promo-flag.png") top right -48px;
+    background-size: auto;
+    background-repeat: no-repeat;
   }
 }
 
 .promo__title {
   font-family: "Acworth", sans-serif;
-  text-transform: uppercase;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-size: 35px;
-  line-height: 1;
+  font-size: 40px;
   font-weight: bold;
+  max-width: 280px;
   width: 100%;
-  margin-bottom: 20px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+  margin-right: auto;
+  margin-bottom: 10px;
 
   @include rm(480) {
     max-width: 100%;
@@ -59,55 +63,44 @@
     flex-direction: row;
   }
 
-  @include rm(1220) {
+  @include rm(1220){
     line-height: 1;
   }
 }
 
 .promo__title-first {
-  padding-left: 1px;
-  padding-right: 1px;
-  background: linear-gradient(270deg, #FFE600 0%, rgba(255, 230, 0, 0) 100%);
-  margin-bottom: 5px;
-}
+  font-size: 48px;
 
-//  @include rm(1220){
-//    font-size: 96px;
-//    line-height: 1; //desk
-//    padding-left: 15px; //desk
-//    padding-right: 15px; //desk
-//    padding-bottom: 10px; //desk
-//  }
-//}
+  @include rm(1024) {
+    font-size: 65px;
+  }
+
+  @include rm(1220){
+    font-size: 96px;
+    line-height: 1; //desk
+    padding-left: 15px; //desk
+    padding-right: 15px; //desk
+    padding-bottom: 10px; //desk
+  }
+}
 
 .promo__title-second {
-  background: linear-gradient(90deg, #10E6D9 0%, rgba(16, 230, 217, 0) 100%);
-  padding-left: 1px;
-  padding-right: 1px;
-  margin-bottom: 5px;
+  //font-family: "Montserrat", Helvetica, sans-serif;
+  font-style: italic;
+
+  @include rm(1220){
+    padding: 7px;
+    padding-left: 10px;
+    padding-right: 25px;
+  }
 }
 
-.promo__title-third {
-  padding-left: 1px;
-  padding-right: 1px;
-  background: linear-gradient(270deg, #FF57C6 0%, rgba(255, 87, 198, 0) 100%);
+.promo__subtitle-second {
+  @include rm(1220){
+    padding: 7px;
+    padding-right: 15px;
+  }
 }
-//  //font-family: "Montserrat", Helvetica, sans-serif;
-//  //font-style: italic;
-//
-//  @include rm(1220){
-//    padding: 7px;
-//    padding-left: 10px;
-//    padding-right: 25px;
-//  }
-//}
-
-//.promo__subtitle-second {
-//  @include rm(1220) {
-//    padding: 7px;
-//    padding-right: 15px;
-//  }
-//}
 
 .promo__title-last {
   align-self: flex-end;
@@ -116,7 +109,7 @@
     align-self: flex-start;
   }
 
-  @include rm(1220) {
+  @include rm(1220){
     padding: 8px;
     padding-right: 15px;
     padding-left: 15px;
@@ -125,11 +118,9 @@
 }
 
 .promo__support {
-  font-size: 18px;
-  line-height: 30px;
   margin-bottom: 20px;
 
-  @include rm(1220) {
+  @include rm(1220){
     margin-bottom: 0;
     position: absolute;
     bottom: 18px;
@@ -140,49 +131,21 @@
   }
 }
 
-.promo__calendar {
-  display: flex;
-  align-items: center;
-  background: #ffe600;
-  padding: 10px 19px;
-  margin-bottom: 20px;
-}
-
-.promo__calendar-img {
-  width: 40px;
-  height: 40px;
-  background: red;
-  margin-right: 45px;
-}
-
-.promo__calendar-text {
-  font-size: 50px;
-  line-height: 50px;
-  font-weight: 500;
-  margin-right: 15px;
-}
-
-.promo_calendar-info {
-  display: flex;
-  flex-direction: column;
-}
-
 .promo__text {
   margin-bottom: 20px;
-  line-height: 24px;
 
   @include rm(640) {
     margin-bottom: 0;
     margin-top: 20px;
   }
 
-  @include rm(1024) {
+  @include rm(1024){
     margin-top: 0;
     max-width: 380px;
     width: 100%;
   }
 
-  @include rm(1220) {
+  @include rm(1220){
     max-width: 480px;
     line-height: 1.7; //desk
     margin-right: 135px;
@@ -197,14 +160,14 @@
     align-items: center;
     margin-bottom: 20px;
   }
-  @include rm(1024) {
+  @include rm(1024){
     justify-content: space-between;
   }
 
-  @include rm(1220) {
+  @include rm(1220){
     justify-content: flex-start;
     align-items: flex-start;
-    margin-bottom: 0; //desk
+    margin-bottom: 0;//desk
   }
 }
 
@@ -215,7 +178,7 @@
     order: 1;
   }
 
-  @include rm(1220) {
+  @include rm(1220){
     margin-right: 25px;
   }
 }
@@ -228,11 +191,11 @@
     margin-bottom: 0;
   }
 
-  @include rm(1024) {
+  @include rm(1024){
     order: 2;
   }
 
-  @include rm(1220) {
+  @include rm(1220){
     line-height: 1.7; //desk
   }
 }
@@ -247,7 +210,7 @@
 }
 
 .promo-title__wrapper {
-  @include rm(1220) {
+  @include rm(1220){
     position: relative;
     margin-bottom: 65px;
   }

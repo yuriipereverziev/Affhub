@@ -9,11 +9,10 @@ const Timer = (function () {
     timerMeetup: function () {
       function timer() {
         const today = new Date();
-        const countDownDate = new Date(2022, 10, 4, 17, 0);
+        const countDownDate = new Date(2022, 6, 21, 17, 0);
         const distance = countDownDate - today;
 
         let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
         let hours = Math.floor(
           (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
         );
@@ -24,28 +23,24 @@ const Timer = (function () {
         minutes = minutes < 10 ? "0" + minutes : "" + minutes;
         seconds = seconds < 10 ? "0" + seconds : "" + seconds;
         hours = hours < 10 ? "0" + hours : "" + hours;
-
         days = days < 10 ? "0" + days : "" + days;
 
-        // days = ("" + days).split("");
-        // hours = ("" + hours).split("");
-        // minutes = ("" + minutes).split("");
-        // seconds = ("" + seconds).split("");
+        days = ("" + days).split("");
+        hours = ("" + hours).split("");
+        minutes = ("" + minutes).split("");
+        seconds = ("" + seconds).split("");
 
         Timer.timeToHtml(daysTo, days);
         Timer.timeToHtml(hoursTo, hours);
         Timer.timeToHtml(minutesTo, minutes);
         Timer.timeToHtml(secondsTo, seconds);
-
       }
       setInterval(timer, 1000);
-
     },
-
     timeToHtml: function (container, time) {
       for (let i = 0; i < container.length; i++) {
         const element = container[i];
-        element.innerHTML = time;
+        element.innerHTML = time[i % 2];
       }
     },
     init: function () {
