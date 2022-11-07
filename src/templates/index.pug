@@ -1,30 +1,27 @@
 extends settings/layout
 
 prepend html
-  - const lang = "uk";
+    - const lang = "uk";
 
 prepend head
-  - const pageTitle = "Meetup for Ukrainian Affiliate Community";
-  - const themeColor = "#fbfbfb";
+    - const pageTitle = "Meetup for Ukrainian Affiliate Community";
+    - const themeColor = "#fbfbfb";
 
 append head
 
 append content
-  .main-bg
-    include components/header
-
-    main
-      include components/promo
-      include components/about
-      include components/purpose
-      include components/program
-      include components/community
-      include components/map
-      include components/team
-      include components/registration
-      include components/sponsors
-      include components/partners
-      include components/footer
+    .main-bg
+        include components/promo
+        include components/about
+        include components/purpose
+        include components/program
+        include components/community
+        include components/map
+        include components/team
+        include components/registration
+        include components/sponsors
+        include components/partners
+        include components/footer
 
     include components/popup
 

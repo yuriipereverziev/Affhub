@@ -1,27 +1,46 @@
 section.promo
-  .container
+    .container
 
-    include timer
+        img.promo__logo(src="img/logo.png" alt="logo" width="220" height="48")
+
+        h1.promo__title
+            span.promo__title-first Сharity
+            span.promo__title-second Affhub meetup
+            span.promo__title-third Kyiv
+
+        p.promo__support.text-bold Ми продовжуємо працювати та підтримуємо наших!
+
+        .promo__calendar
+            img.promo__calendar-img(src="" alt="image")
+            span.promo__calendar-text 16
+            .promo_calendar-info
+                span.text-bold грудня
+                span 17:00
+
+        p.promo__text
+            | Запрошуємо тебе на&nbsp;
+            span.text-bold новорічний арбітражний івент
+            |  та масштабний благодійний аукціон!
+
+        include timer
+
+        .promo-title__wrapper
+            //h1.promo__title
+            //    span.promo__title-first.text-bg__white Meetup
+            //
+            //    span.promo__title-wrap
+            //        span.promo__title-second.text-bg__white for Ukrainian
+            //        span.text-bg__white.promo__subtitle-second Affiliate
+            //
+            //    span.promo__title-last.text-bg__white Community
 
 
-    .promo-title__wrapper
-      h1.promo__title
-        span.promo__title-first.text-bg__white Meetup
 
-        span.promo__title-wrap
-          span.promo__title-second.text-bg__white for Ukrainian
-          span.text-bg__white.promo__subtitle-second Affiliate
+        .promo__wrapper
+            button.promo__btn.btn.ever-popup-btn.popupbtn Реєстрація
 
-        span.promo__title-last.text-bg__white Community
+            p.promo__entry Вхід — будь-який донат на
+                span.accent-rose благодійну банку Affhub
 
-      p.promo__support.text-bold Ми продовжуємо працювати та підтримуємо наших!
-
-
-    .promo__wrapper
-      button.promo__btn.btn.ever-popup-btn.popupbtn Реєстрація
-
-      p.promo__entry Вхід — будь-який донат на
-        span.accent-rose благодійну банку Affhub
-
-      p.promo__text Приєднуйся до лампової зустрічі представників аффілейт індустрії задля палкого нетворкінгу та підтримки української спільноти!
+            p.promo__text Приєднуйся до лампової зустрічі представників аффілейт індустрії задля палкого нетворкінгу та підтримки української спільноти!
 
